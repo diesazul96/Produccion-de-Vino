@@ -1,0 +1,35 @@
+div.topBar{
+  height: 90px;
+  width: 100%;
+  background-color: #3A1D21;
+  padding-top: 22.5px;
+}
+div.topBar p{
+  font-size: 25pt;
+  text-align: center;
+}
+div.formMov{
+  margin-top: 10%;
+}
+div.formMov p{
+  font-size: 13pt;
+}
+div.formMov input{
+  margin-bottom: 8%;
+  width: 100%;
+  font-size: 15pt;
+}
+
+.date{
+  color:white;
+
+}
+.mat-form-field{
+  border-color: white;
+  outline: 0;
+
+}
+.toggle{
+  background: white;
+  border-radius: 3px;
+}
