@@ -1,0 +1,1 @@
+export * from './grafica-sensor.component';
