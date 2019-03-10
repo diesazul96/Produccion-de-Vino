@@ -1,0 +1,140 @@
+div.header{
+  background-color: #3A1D21;
+  width: 100%;
+  height: 90px;
+}
+
+div.menuLabel{
+  color: white;
+
+  text-align: center;
+}
+
+div.menuLabel span{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div.menuIcon{
+  text-align: left;
+  color: white;
+  margin-left: 10px;
+  margin-top: 20px;
+}
+
+div.parcelInfo{
+  text-align: center;
+  margin-top: 15px;
+}
+
+div.parcelName{
+  display: inline;
+  width: 90%;
+  margin-right: -27%;
+}
+
+div.parcelName span{
+  font-size: 30px;
+  color: white;
+}
+
+div.pencilIcon{
+  display: inline;
+  float: right;
+  margin-top: 10px;
+  margin-right: 27%;
+}
+
+div.parcelArea{
+
+}
+
+div.icon{
+  display: inline;
+  width: 40px;
+  height: 40px;
+  float: left;
+  margin-right: 20px;
+}
+
+div.areaName{
+  display: inline;
+  float: left;
+  margin-right: 15px;
+}
+
+div.areaName span{
+  color: white;
+  font-size: 30px;
+}
+
+div.arrowDownIcon{
+  display: inline;
+  width: 40px;
+  height: 40px;
+  float: right;
+}
+
+div.collapseList{
+  margin-top: 10px;
+  margin-left: 30px;
+}
+
+div.collapseList li{
+  list-style-type: none;
+  margin-top: 10px;
+}
+
+div.collapseList a{
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+div.addIcon{
+  text-align: center;
+}
+
+div.check{
+  position: absolute;
+  bottom: 5%;
+  width: 100%;
+  text-align: right;
+}
+
+div.check img{
+  margin-right: 20px;
+}
+
+@media (min-width: 350px) {
+  .menuLabel{
+    font-size: 35px;
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 350px) {
+  .menuLabel{
+    font-size: 30px;
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: 748px) {
+  .parcelArea{
+    width: 80%;
+    margin-left: auto;
+    margin-top: auto;
+  }
+  .addIcon{
+    width: 70%;
+  }
+}
+
+@media (max-width: 748px) {
+  .parcelArea{
+    width: 90%;
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+}

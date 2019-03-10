@@ -1,0 +1,84 @@
+div.header{
+  background-color: #3A1D21;
+  width: 100%;
+  height: 90px;
+}
+
+div.menuLabel{
+  color: white;
+  font-size: 45px;
+  margin-top: 5px;
+  text-align: center;
+}
+
+div.menuLabel span{
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div.menuIcon{
+  text-align: right;
+  color: white;
+  margin-left: -20px;
+  margin-top: 20px;
+}
+
+div.icon{
+  display: inline;
+  width: 40px;
+  height: 40px;
+  float: left;
+  margin-right: 20px;
+}
+
+div.menuArea{
+  display: inline;
+  width: 90%;
+  margin-top: 15px;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+div.areaName span{
+  color: white;
+  font-size: 30px;
+}
+
+div.collapseList{
+  margin-top: 10px;
+  margin-left: 30px;
+}
+
+div.collapseList li{
+  list-style-type: none;
+  margin-top: 10px;
+}
+
+div.collapseList a{
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+div.addIcon{
+  text-align: center;
+}
+
+div.line{
+  width: 85%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30%;
+}
+
+div.line hr{
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #969FAA;
+  margin: 1em 0;
+  padding: 0;
+
+}

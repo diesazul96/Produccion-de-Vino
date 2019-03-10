@@ -1,0 +1,82 @@
+<div class="header">
+  <div class="row">
+    <div class="col-2 menuIcon">
+      <img src="assets/images/menuIcon.png" alt="menu" width="48px" height="48px">
+    </div>
+    <div class="col-8 menuLabel">
+      <span>Nueva parcela</span>
+    </div>
+    <div class="col-2">
+    </div>
+  </div>
+</div>
+
+<div class="parcelInfo">
+  <div class="parcelName">
+    <span>Parcela 1</span>
+  </div>
+  <div class="pencilIcon">
+    <img src="assets/images/pencilIcon.png" alt="place" width="20px" height="20px">
+  </div>
+</div>
+
+<div class="row">
+  <div class="parcelArea">
+    <div class="col-12">
+      <div class="icon">
+        <img src="assets/images/sensorIcon.png" alt="place" width="40px" height="40px">
+      </div>
+      <div class="areaName">
+        <span style="cursor:pointer" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed" aria-controls="sensorCollapse">Sensores</span>
+      </div>
+      <div class="arrowIcon" *ngIf="isCollapsed; else notCollapsed">
+        <img src="assets/images/arrowDownIcon.png" alt="place" width="40px" height="40px">
+      </div>
+      <ng-template #notCollapsed>
+        <img src="assets/images/arrowUpIcon.png" alt="add" width="40px" height="40px">
+      </ng-template>
+      <div id="sensorCollapse" [ngbCollapse]="isCollapsed" class="collapseList">
+        <ul>
+          <li><a href="#">Temperatura</a></li>
+          <li><a href="#">Presión atmosférica</a></li>
+          <li><a href="#">Pluviosidad</a></li>
+        </ul>
+        <div class="addIcon">
+          <img src="assets/images/addIcon.png" alt="add" width="35px" height="35px">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="parcelArea">
+    <div class="col-12">
+      <div class="icon">
+        <img src="assets/images/waterIcon.png" alt="place" width="40px" height="40px">
+      </div>
+      <div class="areaName">
+        <span style="cursor:pointer" (click)="isCollapsed2 = !isCollapsed2" [attr.aria-expanded]="!isCollapsed2" aria-controls="treatmentCollapse">Tratamientos</span>
+      </div>
+      <div class="arrowIcon" *ngIf="isCollapsed2; else notCollapsed">
+        <img src="assets/images/arrowDownIcon.png" alt="place" width="40px" height="40px">
+      </div>
+      <ng-template #notCollapsed>
+        <img src="assets/images/arrowUpIcon.png" alt="add" width="40px" height="40px">
+      </ng-template>
+      <div id="treatmentCollapse" [ngbCollapse]="isCollapsed2" class="collapseList">
+        <ul>
+          <li><a href="#">Mi Tratamiento 1</a></li>
+          <li><a href="#">Tratamiento para el verano</a></li>
+        </ul>
+        <div class="addIcon">
+          <img src="assets/images/addIcon.png" alt="add" width="35px" height="35px">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="check">
+  <img src="assets/images/checkIcon.png" alt="add" width="35px" height="35px">
+</div>

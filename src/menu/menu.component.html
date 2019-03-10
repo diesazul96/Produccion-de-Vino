@@ -1,0 +1,74 @@
+<div class="header">
+  <div class="row">
+    <div class="col-4">
+    </div>
+    <div class="col-4 menuLabel">
+      <span>Menú</span>
+    </div>
+    <div class="col-4 menuIcon">
+      <img src="assets/images/menuIcon.png" alt="menu" width="48px" height="48px">
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="menuArea">
+    <div class="col-12">
+      <div class="icon">
+        <img src="assets/images/placesIcon.png" alt="place" width="40px" height="40px">
+      </div>
+      <div class="areaName">
+        <span style="cursor:pointer" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed" aria-controls="parcelCollapse">Mis Parcelas</span>
+      </div>
+      <div id="parcelCollapse" [ngbCollapse]="isCollapsed" class="collapseList">
+        <ul>
+          <li><a href="#">Petit Verdot</a></li>
+          <li><a href="#">Cabernet Sauvignon</a></li>
+          <li><a href="#">Malbec</a></li>
+        </ul>
+        <div class="addIcon">
+          <img src="assets/images/addIcon.png" alt="add" width="35px" height="35px">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="menuArea">
+    <div class="col-12">
+      <div class="icon">
+        <img src="assets/images/movementIcon.png" alt="movement" width="40px" height="40px">
+      </div>
+      <div class="areaName">
+        <span>Registrar Movimiento</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="menuArea">
+    <div class="col-12">
+      <div class="icon">
+        <img src="assets/images/waterIcon.png" alt="water" width="40px" height="40px">
+      </div>
+      <div class="areaName">
+        <span>Registrar Tratamiento</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="line">
+  <hr>
+</div>
+<div class="row">
+  <div class="menuArea">
+    <div class="col-12">
+      <div class="icon">
+        <img src="assets/images/settingsIcon.png" alt="water" width="35px" height="35px">
+      </div>
+      <div class="areaName">
+        <span>Configuración</span>
+      </div>
+    </div>
+  </div>
+</div>
