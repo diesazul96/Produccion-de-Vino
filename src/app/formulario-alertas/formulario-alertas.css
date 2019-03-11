@@ -1,0 +1,25 @@
+.sensor-form{
+    margin-left: 10%;
+}
+
+mat-form-field {
+    color: white;
+    font-family: 'Lato', sans-serif !important;
+    display: -webkit-box;
+    font-size: 20px;
+}
+
+.comparador{
+    height: 20px; 
+    border:2px solid #ffffff; 
+    border-radius: 8px;
+}
+
+.mat-button-toggle-checked{
+    color: #3A1D21;
+}
+
+.mat-slide-toggle{
+    display: -webkit-box;
+    color: white;
+}

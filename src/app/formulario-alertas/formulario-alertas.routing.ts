@@ -1,16 +1,15 @@
-import { OpcionesSensor } from './../opciones-sensor/opciones-sensor.component';
 import { Routes, RouterModule }  from '@angular/router';
 
 
-import { Dashboard } from './dashboard.component';
+import { FormularioAlertas } from './formulario-alertas.component';
 import { ModuleWithProviders } from '@angular/core';
 
 export const routes: Routes = [
   {
     path: '',
-    component: Dashboard,
+    component: FormularioAlertas,
     children: [
-      //{ path: 'opciones-sensor', redirectTo: '/configSensor.html' }
+      //{ path: 'childview', component: ChildViewComponent }
     ]
   }
 ];
