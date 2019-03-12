@@ -1,18 +1,15 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HelloComponent } from './hello.component';
+import { LoginComponent } from './login/login.component';
+import { ResterpasswordComponent } from './resterpassword/resterpassword.component';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+  imports:      [ BrowserModule, FormsModule ],
+  declarations: [ AppComponent, HelloComponent, LoginComponent, ResterpasswordComponent ],
+  bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
