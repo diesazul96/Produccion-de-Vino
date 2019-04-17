@@ -1,7 +1,7 @@
 <div class="header">
   <div class="row">
     <div class="col-2 menuIcon">
-      <img src="assets/images/menuIcon.png" alt="menu" width="48px" height="48px">
+      <a routerLink="../menu" routerLinkActive="active"><img src="assets/images/menuIcon.png" alt="menu" width="48px" height="48px"></a>
     </div>
     <div class="col-8 menuLabel">
       <span>Nueva parcela</span>
@@ -90,7 +90,7 @@
 </div>
 
 <div (click)="addParcel(parcelName.value)" (click)="open(content)" class="check">
-  <img src="assets/images/checkIcon.png" alt="add" width="35px" height="35px">
+  <a routerLink="../menu" routerLinkActive="active"><img src="assets/images/checkIcon.png" alt="add" width="35px" height="35px"></a>
 </div>
 
 <ng-template #content let-c="close" let-d="dismiss">
