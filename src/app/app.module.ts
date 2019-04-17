@@ -7,17 +7,17 @@ import { RegistroComponent } from '../registro/registro.component';
 import { TratamientoComponent } from '../tratamiento/tratamiento.component';
 import { MovimientoComponent } from '../movimiento/movimiento.component';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
-<<<<<<< HEAD
 import{MatNativeDateModule} from '@angular/material';
-=======
-import{ MatNativeDateModule} from '@angular/material';
->>>>>>> 6c18956d66f553b96f6d5a761cbfed2d4db80096
 
 import{ MatDatepickerModule} from '@angular/material/datepicker';
 import{ MatInputModule} from '@angular/material/input';
 
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AngularFirestore } from '@angular/fire/firestore';
+import { AngularFireModule } from '@angular/fire';
+import { environment} from '../environments/environment';
+
 
 @NgModule({
   declarations: [
@@ -34,12 +34,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FormsModule,
     ReactiveFormsModule,
     MatInputModule,
-    MatNativeDateModule
-
-
+    MatNativeDateModule,
+    AngularFireModule.initializeApp(environment.firebase)
 
   ],
-  providers: [],
+  providers: [AngularFirestore],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

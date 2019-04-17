@@ -11,16 +11,16 @@
 
       <div class="formMov">
         <p>Cliente</p>
-        <input type="text"/><br>
+        <input class="input" #cliente type="text"/><br>
         <p>Tipo de Uva</p>
-        <input type="text"/><br>
+        <input class="input" #tipoUva type="text"/><br>
         <p>Cantidad</p>
-        <input type="text"/><br>
+        <input class="input" #cantidad type="text"/><br>
         <p>Valor</p>
-        <input type="text"/><br>
+        <input class="input" #valor type="text"/><br>
         <p>Fecha</p>
           <mat-form-field>
-            <input class="date" matInput [matDatepicker]="simpleDate"  readonly>
+            <input #fecha class="date input" matInput [matDatepicker]="simpleDate"  readonly>
             <mat-datepicker-toggle class="toggle" matSuffix [for]="simpleDate" >
             </mat-datepicker-toggle>
             <mat-datepicker #simpleDate></mat-datepicker>
@@ -35,7 +35,7 @@
 
 
     <div class="col-lg-3 col-md-3 thirdColumn">
-      <div class="okCircle">
+      <div class="okCircle" (click)="createMovimiento(cliente.value,tipoUva.value,cantidad.value,valor.value,fecha.value)" >
         <div class="checkmark">
 
         </div>

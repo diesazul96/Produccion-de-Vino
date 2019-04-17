@@ -18,8 +18,9 @@ div.formTrat input{
   width: inherit;
 }
 div.formTrat input.half{
-  width: 100%;
+  width: 50%;
 }
+
 
 
 div.formTrat{
@@ -40,7 +41,7 @@ input{
     border-width: 3px;
     border-style: solid;
     border-color: white;
-    margin-top: 50%;
+    margin-top: 0;
     cursor: pointer;
 }
 .cross{
