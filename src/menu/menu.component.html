@@ -21,10 +21,10 @@
         <span style="cursor:pointer" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed" aria-controls="parcelCollapse">Mis Parcelas</span>
       </div>
       <div id="parcelCollapse" [ngbCollapse]="isCollapsed" class="collapseList">
-        <ul>
-          <li><a href="#">Petit Verdot</a></li>
-          <li><a href="#">Cabernet Sauvignon</a></li>
-          <li><a href="#">Malbec</a></li>
+        <ul id="ul">
+          <li *ngFor="let parcel of parcels" >
+            <a href="#">{{parcel.name}}</a>
+          </li>
         </ul>
         <div class="addIcon">
           <a routerLink="../newParcel" routerLinkActive="active"><img src="assets/images/addIcon.png" alt="add" width="35px" height="35px"></a>
