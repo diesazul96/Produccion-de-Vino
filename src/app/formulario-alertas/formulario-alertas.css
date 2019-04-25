@@ -9,6 +9,11 @@ mat-form-field {
     font-size: 20px;
 }
 
+mat-list p,h3{
+    color: white;
+    text-align: left;
+}
+
 .comparador{
     height: 20px; 
     border:2px solid #ffffff; 

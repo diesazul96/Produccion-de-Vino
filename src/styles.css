@@ -6,6 +6,3 @@ body{
     font-family: 'Lato', sans-serif !important;
 }
 
-mat-button-toggle mat-button-toggle-appearance-standard mat-button-toggle-checked cdk-focused cdk-touch-focused {
-    background-color: #3A1D21 !important;
-}
