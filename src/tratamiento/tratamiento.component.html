@@ -13,20 +13,44 @@
 
       <div class="formTrat">
         <p>Origen del agua</p>
-        <input type="text"/>
+        <input #origen type="text" class="input"/>
         <p>Contenido químico del agua</p>
-        <input type="text"/>
+        <input #quim type="text" class="input"/>
 
 
+
+      <div class="row">
+        <div class="col-lg-6 col-md-6 col-6 col-sm-6">
+          <div class="half">
+            <p>Fertilizante</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-3 col-3 col-sm-3">
+          <div class="circle" (click)="append('fertContent')">
+            <span class="cross">+</span>
+          </div>
+
+        </div>
+        <div class="col-lg-3 col-md-3 col-3 col-sm-3">
+
+        </div>
+      </div>
+
+        <div id="fertContent">
+
+              <div class="half">
+                <input #fertContent ype="text" class="half input"/>
+              </div>
+
+        </div>
         <div class="row">
           <div class="col-lg-6 col-md-6 col-6 col-sm-6">
             <div class="half">
-              <p >Fertilizante</p>
-              <input type="text" class="half"/>
+              <p>Pesticida</p>
             </div>
           </div>
           <div class="col-lg-3 col-md-3 col-3 col-sm-3">
-            <div class="circle">
+            <div class="circle" (click)="append('pestContent')">
               <span class="cross">+</span>
             </div>
 
@@ -35,31 +59,20 @@
 
           </div>
         </div>
-        <div class="row">
-          <div class="col-lg-6 col-md-6 col-6 col-sm-6">
+        <div id="pestContent">
             <div class="half">
-              <p >Pesticida</p>
-              <input type="text" class="half"/>
+              <input #pestContent type="text" class="half input"/>
             </div>
-          </div>
-          <div class="col-lg-3 col-md-3 col-3 col-sm-3">
-            <div class="circle"></div>
-            <span class="cross cross2">+</span>
-
-          </div>
-          <div class="col-lg-3 col-md-3 col-3 col-sm-3">
-
-          </div>
         </div>
+
         <div class="row">
           <div class="col-lg-6 col-md-6 col-6 col-sm-6">
             <div class="half">
-              <p >Fungicida</p>
-              <input type="text" class="half"/>
+              <p>Fungicida</p>
             </div>
           </div>
           <div class="col-lg-3 col-md-3 col-3 col-sm-3">
-            <div class="circle">
+            <div class="circle" (click)="append('fungContent')">
               <span class="cross">+</span>
             </div>
 
@@ -67,6 +80,13 @@
           <div class="col-lg-3 col-md-3 col-3 col-sm-3">
 
           </div>
+        </div>
+        <div id="fungContent">
+
+            <div class="half">
+              <input #fungContent type="text" class="half input"/>
+            </div>
+
         </div>
 
 
@@ -74,7 +94,7 @@
 
     </div>
     <div class="col-lg-3 col-md-3 thirdColumn">
-      <div class="okCircle">
+      <div class="okCircle" (click)="createTratamiento(origen.value,quim.value,fertContent.value,pestContent.value,fungContent.value)">
         <div class="checkmark">
 
         </div>
