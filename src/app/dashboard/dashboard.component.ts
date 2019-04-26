@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
     selector: 'dashboard',
@@ -7,7 +7,8 @@ import { Router } from '@angular/router';
     styleUrls: ['dashboard.css']
 })
 export class Dashboard {
-
-  constructor(private router : Router) {
+  name: string;
+  constructor(private route: ActivatedRoute) {
+    route.params.subscribe(params => {this.name = params['name'];});
   }
 }

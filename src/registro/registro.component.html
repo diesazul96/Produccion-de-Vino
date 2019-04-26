@@ -17,7 +17,7 @@
           <input class="input" #pass type="password"/>
           <p>Confirmar Contraseña</p>
           <input class="input" #passConf type="password"/>
-          <button type="button" class="btn btn-default regBoton" (click)="createUsuario(correo.value, nombre.value, pass.value, passConf.value)">Crear Cuenta</button>
+          <button routerLink="../inicioSesion" type="button" class="btn btn-default regBoton" (click)="createUsuario(correo.value, nombre.value, pass.value, passConf.value)">Crear Cuenta</button>
         </div>
 
 
