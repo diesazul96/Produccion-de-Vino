@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { Parcel } from './parcel';
 import { AngularFirestore , AngularFirestoreCollection} from '@angular/fire/firestore';
@@ -22,7 +23,7 @@ export class NewParcelComponent implements OnInit {
 
   private db: AngularFirestore;
 
-  constructor(db: AngularFirestore, config: NgbModalConfig, private modalService: NgbModal) {
+  constructor(db: AngularFirestore, config: NgbModalConfig, private modalService: NgbModal, private router: Router) {
     this.db = db;
     this.parcel = new Parcel();
     this.parcelCollectionRef = db.collection<Parcel>('parcels');

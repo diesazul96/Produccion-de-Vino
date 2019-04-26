@@ -23,7 +23,7 @@
       <div id="parcelCollapse" [ngbCollapse]="isCollapsed" class="collapseList">
         <ul id="ul">
           <li *ngFor="let parcel of parcels" >
-            <a href="#">{{parcel.name}}</a>
+            <a #name (click)="fetchRowData(name.textContent)">{{parcel.name}}</a>
           </li>
         </ul>
         <div class="addIcon">
@@ -40,7 +40,7 @@
         <img src="assets/images/movementIcon.png" alt="movement" width="40px" height="40px">
       </div>
       <div class="areaName">
-        <span>Registrar Movimiento</span>
+        <a routerLink="../movimiento"><span>Registrar Movimiento</span></a>
       </div>
     </div>
   </div>
@@ -52,7 +52,7 @@
         <img src="assets/images/waterIcon.png" alt="water" width="40px" height="40px">
       </div>
       <div class="areaName">
-        <span>Registrar Tratamiento</span>
+        <a routerLink="../tratamiento"><span>Registrar Tratamiento</span></a>
       </div>
     </div>
   </div>

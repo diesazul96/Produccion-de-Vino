@@ -90,7 +90,7 @@
 </div>
 
 <div (click)="addParcel(parcelName.value)" (click)="open(content)" class="check">
-  <a routerLink="../menu" routerLinkActive="active"><img src="assets/images/checkIcon.png" alt="add" width="35px" height="35px"></a>
+  <a><img src="assets/images/checkIcon.png" alt="add" width="35px" height="35px"></a>
 </div>
 
 <ng-template #content let-c="close" let-d="dismiss">
@@ -98,7 +98,7 @@
     <p>Parcela añadida</p>
   </div>
   <div class="modal-footer">
-    <button type="button" class="btn btn-outline-dark" (click)="c('Save click')">Cerrar</button>
+    <button routerLink="../menu" type="button" class="btn btn-outline-dark" (click)="c('Save click')">Cerrar</button>
   </div>
 
 </ng-template>

@@ -15,20 +15,20 @@
             <p>Usuario</p>
           </div><br>
           <div class="fieldLine">
-            <input type="text" class="field">
+            <input #user type="text" class="field">
           </div><br>
           <div class="fieldName ps">
             <p>Contraseña</p>
           </div><br>
           <div class="fieldLine">
-            <input type="text" class="field">
+            <input #password type="password" class="field">
           </div>
       </div>
     </div>
     <div class="row">
       <div class="col-12">
         <div class="loginButton">
-          <a routerLink="../menu" routerLinkActive="active" href="#">INICIAR SESIÓN</a>
+          <a (click)="logIn(user.value, password.value, content)" routerLinkActive="active" href="#">INICIAR SESIÓN</a>
         </div>
       </div>
     </div>
@@ -39,6 +39,15 @@
   <div class="row">
     <div class="registration">
       <span class="registration">Registrarse</span>
+      <a routerLink="../registro"><span class="registration">Registrarse</span></a>
     </div>
   </div>
+  <ng-template #content let-c="close" let-d="dismiss">
+    <div class="modal-body">
+      <p>Datos Incorrectos</p>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-dark" (click)="c('Save click')">Cerrar</button>
+    </div>
+  </ng-template>
 </div>
