@@ -2,7 +2,7 @@ import { environment } from './../environments/environment';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RegistroComponent } from '../registro/registro.component';
 import { TratamientoComponent } from '../tratamiento/tratamiento.component';
@@ -28,7 +28,7 @@ import { NewParcelComponent } from '../newParcel/newParcel.component';
     TratamientoComponent,
     MovimientoComponent,
     Dashboard, GraficaSensor, OpcionesSensor, FormularioAlertas,
-    InicioSesionComponent, MenuComponent, NewParcelComponent
+    InicioSesionComponent, MenuComponent, NewParcelComponent, routingComponents
   ],
   imports: [
     NgbModule,

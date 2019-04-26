@@ -1,7 +1,7 @@
 <div class="header">
   <div class="row">
     <div class="col-2 menuIcon">
-      <img src="assets/images/menuIcon.png" alt="menu" width="48px" height="48px">
+      <a routerLink="../menu" routerLinkActive="active"><img src="assets/images/menuIcon.png" alt="menu" width="48px" height="48px"></a>
     </div>
     <div class="col-8 menuLabel">
       <span>Nueva parcela</span>
@@ -13,7 +13,7 @@
 
 <div class="parcelInfo">
   <div class="parcelName">
-    <span>Parcela 1</span>
+    <input #parcelName type="text" class="ParcelNameInput" value="Parcela 1">
   </div>
   <div class="pencilIcon">
     <img src="assets/images/pencilIcon.png" alt="place" width="20px" height="20px">
@@ -36,12 +36,18 @@
         <img src="assets/images/arrowUpIcon.png" alt="add" width="40px" height="40px">
       </ng-template>
       <div id="sensorCollapse" [ngbCollapse]="isCollapsed" class="collapseList">
-        <ul>
-          <li><a href="#">Temperatura</a></li>
-          <li><a href="#">Presión atmosférica</a></li>
-          <li><a href="#">Pluviosidad</a></li>
+        <ul id="ul">
+
         </ul>
-        <div class="addIcon">
+        <ul>
+          <li id="newSensorField" [ngbCollapse]="newSensor" class="collapseList">
+            <div class="addAtt">
+              <input #sensor type="text" class="newSensorField" id="nfInput">
+              <img (click)="addSensor(sensor.value)" src="assets/images/addIcon.png" alt="add" width="25px" height="25px">
+            </div>
+          </li>
+        </ul>
+        <div (click)="newSensor = !newSensor" [attr.aria-expanded]="!newSensor" aria-controls="newSensorField" class="addIcon">
           <img src="assets/images/addIcon.png" alt="add" width="35px" height="35px">
         </div>
       </div>
@@ -65,11 +71,17 @@
         <img src="assets/images/arrowUpIcon.png" alt="add" width="40px" height="40px">
       </ng-template>
       <div id="treatmentCollapse" [ngbCollapse]="isCollapsed2" class="collapseList">
-        <ul>
-          <li><a href="#">Mi Tratamiento 1</a></li>
-          <li><a href="#">Tratamiento para el verano</a></li>
+        <ul id="ul2">
         </ul>
-        <div class="addIcon">
+        <ul>
+          <li id="newTreatmentField" [ngbCollapse]="newTreatment" class="collapseList">
+            <div class="addAtt">
+              <input #treatment type="text" class="newTreatmentField" id="nftInput">
+              <img (click)="addTreatment(treatment.value)" src="assets/images/addIcon.png" alt="add" width="25px" height="25px">
+            </div>
+          </li>
+        </ul>
+        <div (click)="newTreatment = !newTreatment" [attr.aria-expanded]="!newTreatment" aria-controls="newTreatmentField" class="addIcon">
           <img src="assets/images/addIcon.png" alt="add" width="35px" height="35px">
         </div>
       </div>
@@ -77,6 +89,16 @@
   </div>
 </div>
 
-<div class="check">
-  <img src="assets/images/checkIcon.png" alt="add" width="35px" height="35px">
+<div (click)="addParcel(parcelName.value)" (click)="open(content)" class="check">
+  <a routerLink="../menu" routerLinkActive="active"><img src="assets/images/checkIcon.png" alt="add" width="35px" height="35px"></a>
 </div>
+
+<ng-template #content let-c="close" let-d="dismiss">
+  <div class="modal-body">
+    <p>Parcela añadida</p>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="c('Save click')">Cerrar</button>
+  </div>
+
+</ng-template>
