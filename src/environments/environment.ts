@@ -4,13 +4,13 @@
 
 export const environment = {
   production: false,
-  firebase:{
-    apiKey: "AIzaSyDrxyM1E1lNl3ttdM0MFV6g8vdB10IE414",
-    authDomain: "vinos-b2fd6.firebaseapp.com",
-    databaseURL: "https://vinos-b2fd6.firebaseio.com",
-    projectId: "vinos-b2fd6",
-    storageBucket: "vinos-b2fd6.appspot.com",
-    messagingSenderId: "475368819220"
+  firebase: {
+    apiKey: "AIzaSyAjBA0se1FzhMlkdMkw4Ot40kIOUTtbzDM",
+    authDomain: "mifabulosoproyectodevino.firebaseapp.com",
+    databaseURL: "https://mifabulosoproyectodevino.firebaseio.com",
+    projectId: "mifabulosoproyectodevino",
+    storageBucket: "mifabulosoproyectodevino.appspot.com",
+    messagingSenderId: "995698947689"
   }
 };
 

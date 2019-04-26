@@ -1,0 +1,53 @@
+.dashboard {
+    background-color: #3A1D21;
+    width: 100%;
+}
+
+.fill-remaining-space {
+    /* This fills the remaining space, by using flexbox. 
+       Every toolbar row uses a flexbox row layout. */
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.menu-icon{
+    width: 24px;
+    color: white;
+}
+
+.text{
+    font-size: 30px;
+    color: white;
+    margin-bottom: 4%;
+}
+
+.id-sensor{
+    color: #ffffff;
+    font-size: 27px;
+}
+
+.nombre-sensor{
+    color: #969FAA;
+    font-size: 20px;
+    margin-right: 2%;
+}
+
+.titulo-sensor{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.subtitulo-sensor{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+
+.alertas{
+    display: flex;
+    align-items:center;
+    justify-content: left;
+}

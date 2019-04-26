@@ -1,0 +1,20 @@
+import { Routes, RouterModule }  from '@angular/router';
+
+
+import { GraficaSensor } from './grafica-sensor.component';
+import { ModuleWithProviders } from '@angular/core';
+
+export const routes: Routes = [
+  {
+    path: '',
+    component: GraficaSensor,
+    children: [
+      //{ path: 'childview', component: ChildViewComponent }
+    ]
+  }
+];
+
+export const routing: ModuleWithProviders = RouterModule.forChild(routes);
+// if it has child use routing below
+//export const routing = RouterModule.forChild(routes);
+

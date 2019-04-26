@@ -8,37 +8,38 @@ import { RegistroComponent } from '../registro/registro.component';
 import { TratamientoComponent } from '../tratamiento/tratamiento.component';
 import { MovimientoComponent } from '../movimiento/movimiento.component';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
-import{MatNativeDateModule} from '@angular/material';
-
-import{ MatDatepickerModule} from '@angular/material/datepicker';
-import{ MatInputModule} from '@angular/material/input';
-
+import { MatDatepickerModule, MatNativeDateModule, MatToolbarModule, MatButtonModule, MatIconModule, MatCardModule, MatFormFieldModule, MatFormFieldControl, MatInputModule, MatButtonToggleModule, MatSlideToggleModule, MatListModule, MatListItem } from '@angular/material';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { AngularFireModule } from '@angular/fire';
-
+import { FormularioAlertas } from './formulario-alertas/formulario-alertas.component';
+import { OpcionesSensor } from './opciones-sensor/opciones-sensor.component';
+import { GraficaSensor } from './grafica-sensor/grafica-sensor.component';
+import { Dashboard } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegistroComponent,
     TratamientoComponent,
-    MovimientoComponent
+    MovimientoComponent,
+    Dashboard, GraficaSensor, OpcionesSensor, FormularioAlertas
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatDatepickerModule,
-    FormsModule,
     ReactiveFormsModule,
-    MatInputModule,
     MatNativeDateModule,
-    AngularFireModule.initializeApp(environment.firebase)
+    BrowserAnimationsModule, MatToolbarModule, MatButtonModule, MatIconModule, MatCardModule, MatFormFieldModule,
+    MatInputModule, MatButtonToggleModule, MatSlideToggleModule, FormsModule, AngularFireModule.initializeApp(environment.firebase),
+    MatListModule
 
   ],
   providers: [AngularFirestore],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }

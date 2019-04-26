@@ -1,0 +1,37 @@
+<form class="sensor-form">
+    <mat-form-field class="comparar">
+        <mat-label style="color: #ffffff;">Valor a comparar</mat-label>
+        <input style="color: #ffffff" matInput [(ngModel)]="alerta.valor" name="valor" value="25">
+    </mat-form-field>
+
+    <mat-button-toggle-group style="margin: 0 auto; border: 0px;" [(ngModel)]="alerta.comparacion" name="comparacion">
+        <mat-button-toggle value="menor-que" style="background-color: transparent; border: 0px;">
+            <img src="../../assets/left-arrow-icon.png" class="comparador">
+        </mat-button-toggle>
+        <mat-button-toggle value="igual" style="background-color: transparent; border: 0px;">
+            <img src="../../assets/equal-icon.png" class="comparador">
+        </mat-button-toggle>
+        <mat-button-toggle value="mayor-que" style="background-color: transparent; border: 0px;">
+            <img src="../../assets/right-arrow-icon.png" class="comparador">
+        </mat-button-toggle>
+    </mat-button-toggle-group><br>
+
+    <mat-slide-toggle labelPosition="before" [(ngModel)]="alerta.notificar" name="notif">Notificarme</mat-slide-toggle><br>
+    <mat-slide-toggle labelPosition="before" [(ngModel)]="alerta.activar" name="act">Activar</mat-slide-toggle><br><br>
+
+    <img src="../../assets/add-icon-white.png" style="height: 40px;" (click)="createAlertaSensor()">
+
+    <img src="../../assets/check-icon.png" style="position: fixed; right: 15px; bottom: 15px; height: 50px;">
+</form>
+
+<mat-list role="list">
+    <mat-list-item *ngFor="let a of alertas">
+        <mat-divider></mat-divider>
+        <h3 matLine style="font-weight: bold;">Alerta {{a.id}} </h3>
+        <p matLine> <b>Valor:</b> {{a.valor}} </p>
+        <p matLine> <b>Comparacion:</b> {{a.comparacion}} </p>
+        <p matLine> <b>Notificarme:</b> {{a.notificar}} </p>
+        <p matLine> <b>Activa:</b> {{a.activar}} </p>
+        <button mat-button (click)="seleccionarAlerta(a)"><mat-icon style="color: white">edit</mat-icon></button>
+    </mat-list-item>
+</mat-list>
