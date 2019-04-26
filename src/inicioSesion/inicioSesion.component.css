@@ -1,0 +1,98 @@
+p.appName{
+  margin-top: 20px;
+  font-family: 'Grand Hotel', cursive;
+  font-style: italic;
+  color:#FFFFFF;
+  font-size: 40pt;
+  margin-bottom: -10px;
+}
+
+div.logo{
+  margin-top: -20px;
+}
+
+div.accessForm{
+  margin-top: 25px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div.fieldName{
+  margin-top: 10px;
+}
+
+div.fieldName p{
+  font-size: 20px;
+  color:#FFFFFF;
+  text-align: left;
+}
+
+div.fieldLine{
+  margin-top: -40px;
+  border-bottom: 1px solid;
+  border-color: white;
+}
+
+div.fieldLine input{
+  background-color: #4B1A21;
+  border: 0;
+  width: 100%;
+}
+
+div.ps{
+  margin-top: -5px;
+}
+
+div.loginButton{
+  margin-top: 30px;
+  background-color: #47525E;
+  height: 40pt;
+  text-align: center;
+  padding-top: 15px;
+  cursor: pointer;
+}
+
+div.loginButton a{
+  color: white;
+  text-decoration: none;
+}
+
+span.forgetOption{
+  margin-top: 10px;
+  color: white;
+  font-size: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+}
+
+div.registration{
+  margin-top: 20px;
+  text-align: right;
+  margin-bottom: 100px;
+}
+
+span.registration{
+  color: white;
+  font-size: 15pt;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .registration{
+    width: 80%;
+  }
+  .accessForm{
+    width: 60%;
+  }
+}
+
+@media (max-width: 768px) {
+  .registration{
+    width: 95%;
+  }
+  .accessForm{
+    width: 90%;
+  }
+}

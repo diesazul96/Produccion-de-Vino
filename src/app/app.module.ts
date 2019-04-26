@@ -17,6 +17,9 @@ import { FormularioAlertas } from './formulario-alertas/formulario-alertas.compo
 import { OpcionesSensor } from './opciones-sensor/opciones-sensor.component';
 import { GraficaSensor } from './grafica-sensor/grafica-sensor.component';
 import { Dashboard } from './dashboard/dashboard.component';
+import { InicioSesionComponent } from '../inicioSesion/inicioSesion.component';
+import { MenuComponent } from '../menu/menu.component';
+import { NewParcelComponent } from '../newParcel/newParcel.component';
 
 @NgModule({
   declarations: [
@@ -24,9 +27,11 @@ import { Dashboard } from './dashboard/dashboard.component';
     RegistroComponent,
     TratamientoComponent,
     MovimientoComponent,
-    Dashboard, GraficaSensor, OpcionesSensor, FormularioAlertas
+    Dashboard, GraficaSensor, OpcionesSensor, FormularioAlertas,
+    InicioSesionComponent, MenuComponent, NewParcelComponent
   ],
   imports: [
+    NgbModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
