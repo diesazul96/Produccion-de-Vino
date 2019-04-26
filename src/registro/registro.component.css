@@ -1,0 +1,33 @@
+div.registroForm p{
+  margin-bottom: 0;
+  font-size: 13pt;
+}
+div.registroForm input{
+  margin-left: auto;
+  margin-right: auto;
+  width: inherit;
+}
+div.formReg{
+  width: inherit;
+  margin-top: 10%;
+}
+input{
+  margin-bottom: 8%;
+}
+button.regBoton{
+  background-color: #47525E;
+  color: white;
+  width: inherit;
+  margin-top: 5%;
+}
+div.topBar{
+  height: 90px;
+  width: 100%;
+  background-color: #3A1D21;
+  padding-top: 22.5px;
+}
+div.topBar p{
+  font-size: 25pt;
+  text-align: center;
+
+}

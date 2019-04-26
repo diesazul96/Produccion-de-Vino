@@ -1,0 +1,105 @@
+<div class="topBar">
+  <p>Registrar Tratamiento</p>
+
+</div>
+
+
+<div class="container tratForm">
+  <div class="row">
+
+    <div class="col-lg-3 col-md-3">
+    </div>
+    <div class="col-lg-6 col-12 col-md-6">
+
+      <div class="formTrat">
+        <p>Origen del agua</p>
+        <input #origen type="text" class="input"/>
+        <p>Contenido químico del agua</p>
+        <input #quim type="text" class="input"/>
+
+
+
+      <div class="row">
+        <div class="col-lg-6 col-md-6 col-6 col-sm-6">
+          <div class="half">
+            <p>Fertilizante</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-3 col-3 col-sm-3">
+          <div class="circle" (click)="append('fertContent')">
+            <span class="cross">+</span>
+          </div>
+
+        </div>
+        <div class="col-lg-3 col-md-3 col-3 col-sm-3">
+
+        </div>
+      </div>
+
+        <div id="fertContent">
+
+              <div class="half">
+                <input #fertContent ype="text" class="half input"/>
+              </div>
+
+        </div>
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-6 col-sm-6">
+            <div class="half">
+              <p>Pesticida</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-3 col-3 col-sm-3">
+            <div class="circle" (click)="append('pestContent')">
+              <span class="cross">+</span>
+            </div>
+
+          </div>
+          <div class="col-lg-3 col-md-3 col-3 col-sm-3">
+
+          </div>
+        </div>
+        <div id="pestContent">
+            <div class="half">
+              <input #pestContent type="text" class="half input"/>
+            </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-6 col-sm-6">
+            <div class="half">
+              <p>Fungicida</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-3 col-3 col-sm-3">
+            <div class="circle" (click)="append('fungContent')">
+              <span class="cross">+</span>
+            </div>
+
+          </div>
+          <div class="col-lg-3 col-md-3 col-3 col-sm-3">
+
+          </div>
+        </div>
+        <div id="fungContent">
+
+            <div class="half">
+              <input #fungContent type="text" class="half input"/>
+            </div>
+
+        </div>
+
+
+      </div>
+
+    </div>
+    <div class="col-lg-3 col-md-3 thirdColumn">
+      <div class="okCircle" (click)="createTratamiento(origen.value,quim.value,fertContent.value,pestContent.value,fungContent.value)">
+        <div class="checkmark">
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

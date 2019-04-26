@@ -1,0 +1,47 @@
+<div class="topBar">
+  <p>Registrar Movimiento</p>
+</div>
+<div class="container">
+
+  <div class="row">
+
+    <div class="col-lg-3 col-md-3">
+    </div>
+    <div class="col-lg-6 col-12 col-md-6">
+
+      <div class="formMov">
+        <p>Cliente</p>
+        <input class="input" #cliente type="text"/><br>
+        <p>Tipo de Uva</p>
+        <input class="input" #tipoUva type="text"/><br>
+        <p>Cantidad</p>
+        <input class="input" #cantidad type="text"/><br>
+        <p>Valor</p>
+        <input class="input" #valor type="text"/><br>
+        <p>Fecha</p>
+          <mat-form-field>
+            <input #fecha class="date input" matInput [matDatepicker]="simpleDate"  readonly>
+            <mat-datepicker-toggle class="toggle" matSuffix [for]="simpleDate" >
+            </mat-datepicker-toggle>
+            <mat-datepicker #simpleDate></mat-datepicker>
+
+          </mat-form-field>
+
+
+      </div>
+
+
+    </div>
+
+
+    <div class="col-lg-3 col-md-3 thirdColumn">
+      <div class="okCircle" (click)="createMovimiento(cliente.value,tipoUva.value,cantidad.value,valor.value,fecha.value)" >
+        <div class="checkmark">
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
